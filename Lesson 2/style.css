@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+	background-image: url("doggy.jpg");
+	background-size: cover;
+}
+header {
+  padding: 10px;
+  text-align: center;
+  font-size: 22px;
+  color: white;
+	background-color:hsla(30, 59%, 76%, 0.2);
+}
+
+nav {
+  float: left;
+  width: 10%;
+  height: 800px; 
+  padding: 0;
+	background-color:hsla(30, 59%, 76%, 0.2);
+  margin: 0px;
+
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+	background-color:hsla(30, 59%, 76%, 0.2);
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 18px 16px;
+  text-decoration: none;
+	text-align:center;
+}
+
+li a:hover {
+  background-color: hsla (50, 1%, 58%, 1);
+  color: white;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 90%;
+	height: 800px;
+	}
+footer {
+  background-color:hsla(30, 59%, 76%, 0.2);
+  padding: 20px;
+  text-align: center;
+  color: white;
+	float:left;
+width:100%;
+}
+
+img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
