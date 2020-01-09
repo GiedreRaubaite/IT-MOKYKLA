@@ -9,12 +9,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   </head>
   <body class="index">
-    <header> <a href="index.html"><img src="logo.png" class="logo"> </a>
+    <header> <a href="index.html"><img src="logo.png" class="logo">
+      </a>
       <h1>Nico šūnų viešbutis</h1>
     </header>
     <section>
       <nav class="page-navigation">
-        <div id="interactive-button">
+        <div id="interactive-button"> 
           <ul>
             <li><a href="apiemus.html">Apie mus</a></li>
             <li><a href="#">Kainos</a></li>
