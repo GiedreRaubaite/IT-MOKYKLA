@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title></title>
+
+    <style>
+        
+        input {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+        legend {
+            padding: 12px 20px;
+        
+        }
+        input[type=submit]  {
+            background-color: rgb(78, 76, 175);
+            width: 200px;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+}
+        .success {
+            display: none;
+        }
+    </style>
+    </head>
+<body>
+    <div class="container">
+
+    <form id="form">
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+            <input type="email"  id="inputEmail3" placeholder="Email" required>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputUsername3" class="col-sm-2 col-form-label">Username</label>
+          <div class="col-sm-10">
+            <input type="text" id="inputUsername3" placeholder="Username" required>
+          </div>
+        </div>
+         
+
+        <div class="form-group row">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+          <div class="col-sm-10">
+            <input type="password" id="inputPassword3" placeholder="Password" required minlength="6">
+          </div>
+        </div>
+        
+        
+        <div class="form-group row">
+          <div class="col-sm-10">
+            <button type="submit" id="btn" class="btn btn-info">Sign in</button>
+          </div>
+        </div>
+        <div class="success">Registration successful</div>
+
+      </form>
+</div>
+
+<script src="jquery-3.5.0.min.js"></script>
+<script src="jquery.validate.min.js"></script>
+<script src="main.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
