@@ -1,19 +1,36 @@
 $(document).ready(function(){
 
        
-          $('#btn').on('click', function(){
+         $('#btn').on('click', function(){
 
-         $('#form').validate();
-         var form = $('#form').validate();
-         var email = $("#inputEmail3").val();
-         var username = $("#inputUsername3").val();
-         var password = $("#inputPassword3").val();
+          $("#form").validate({
+               rules: {
+                   "name": {
+                       required: true,
+                       minlength: 5
+                   },
+                   "email": {
+                       required: true,
+                       email: true
+                   },
+                   "password":{
+                        required:true,
+                        minlength:6
+                   }
+               },
+                submitHandler: function (form) { 
+                   $(".success").show(function(){
+                        $('input').focus(function(){
+                         $(".success").css('display', 'none');                         
 
+                        })
+                   }); 
+                   
+               },
+              
+          });
 
+     });
 
-              console.log(email+username+password);
-         
-        
-
-    });
-     })
+    
+})  
