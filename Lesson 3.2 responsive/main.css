@@ -1,0 +1,89 @@
+/**Desktop**/
+img { max-width: 100%; 
+    margin-left:50%;
+}
+
+#content{
+  width: 54%;
+  float: left;
+  margin-right: 3%;
+}
+
+#sidebar-left{
+  width: 20%;
+  float: left;
+  margin-right: 3%;
+}
+
+#sidebar-right{
+  width: 20%;
+  float: left;
+}
+.sidebar-nav{display: none;}
+
+
+/**Tablet Wide**/
+
+        @media all and (max-width: 991px) { 
+img { max-width: 100%;
+margin-left: 30%;
+}
+
+
+#content{
+  width: 54%;
+  float: left;
+  margin-right: 3%;
+}
+
+#sidebar-left{
+  width: 20%;
+  float: left;
+  margin-right: 3%;
+}
+
+#sidebar-right{
+  width: 20%;
+  float: left;
+}
+.sidebar-nav{display: none;}
+        }
+
+/**Tablet Portrait**/
+       
+        @media all and (max-width: 768px) {
+img { max-width: 100%; 
+margin-left: 0;}
+
+#content{
+  width: 100%;
+}
+
+#sidebar-left{
+  display: none;
+}
+
+#sidebar-right{
+  display: none;
+}
+.sidebar-nav{display: inline;} }
+         }
+
+/**Mobile**/
+
+        @media all and (max-width: 480px) {
+img { max-width: 100%; 
+     margin-left: 0;}
+#content{
+  width: 100%;
+}
+
+#sidebar-left{
+  display: none;
+}
+
+#sidebar-right{
+  display: none;
+}
+.sidebar-nav{display: inline;} }
+       
