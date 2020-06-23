@@ -1,0 +1,1 @@
+Tekstas is text.txt dokumento

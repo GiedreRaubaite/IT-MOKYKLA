@@ -1,0 +1,84 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <style>
+    #text {
+                width:100%;
+                float:left;
+                padding: 15px 15px 7px 15px;
+                margin: 10px;
+            }
+            ul {
+  float:left;
+  width:50%;
+  height: 200px;
+  list-style-type: none;
+  margin: 0 1% 1.5%;
+  display: block;
+  padding:15px 15px 7px 15px;
+  background:rgba(189, 40, 40, 0.1);
+}
+           li {
+  display: block;
+  float: left;
+  width: 20%;
+  height: 200px;
+  background-color: blue;
+}
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+  width:100%;
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+        </style>
+    </head>
+<body>
+    <div id="text"><p><h1> Changing background </h1></p></div>
+
+    <div id="colors">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+
+            
+          </ul>
+    </div>
+    <div id="text">
+      <p><h1> Changing theme </h1></p>
+        <button id="btn">Change</button>
+</div>
+<div class="grid-container">
+    <div class="item1">Header</div>
+    <div class="item2">Menu</div>
+    <div class="item3">Main</div>  
+    <div class="item4">Right</div>
+    <div class="item5">Footer</div>
+  </div>
+
+    <script type="text/javascript" src="jquery-3.5.0.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>

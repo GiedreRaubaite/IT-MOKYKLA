@@ -1,0 +1,23 @@
+{
+  "name": "lesson4",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "serve": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "cropperjs": "^1.5.7",
+    "express": "^4.17.1",
+    "jquery": "^3.5.1",
+    "jquery-cropper": "^1.0.1",
+    "node-static": "^0.7.11"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "description": ""
+}
