@@ -25,7 +25,6 @@ var calculator = (function () {
     }
     function show() {
         calculate();
-        console.log(result);
         if (result.isNaN) {
             alert('Something went wrong...');
         }
