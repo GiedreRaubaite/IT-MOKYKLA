@@ -1,54 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Calculator</title>
-
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
 </head>
-
 <body>
     <div class="flex-container">
-        <div id="insidecontainer">
-            <div id="calc" class="box box-solid box-default">
+        <div id="InsideFrame">
+            <div class="box box-solid box-default">
                 <div class="row box-header my-auto">
                     <h2 class="box title">Module Pattern calculator</h2>
                 </div>
-<!-- /.box header -->
             </div>
-            <div id="#calculator" class="row box-body my-auto">
-
-                <input id="firstNumberInput" class="col-sm form-control my-auto">
-                <select value="symbol" id="symbol" class="col-sm form-control my-auto">
-                    <option value="+">+</option>
-                    <option value="-">-</option>
-                    <option value="*">*</option>
-                    <option value="/">/</option>
-                </select>
-                <input id="secondNumberInput" class="col-sm form-control my-auto">
-                <button id="count" class="btn-default col-sm" onclick="calculator.calculate();">Count</button>
-                <input id="result" class="form-control row" value="Result" disabled>
-<!-- /.box body -->
+            <div class="row box-header my-auto">
+                <div class="CalculatorHead">
+                    <div id="eq" class="Equation row"></div>
+                    <div id="currNumber" class="CurrentNumber">0</div>
+                </div>
+            </div>
+            <div id="box">
+                <div id="#calculator" class="box-body">
+                    <div class="row">
+                        <div class="Button" onclick="calculator.whichNumber();">7</div>
+                        <div class="Button" onclick="calculator.whichNumber();">8</div>
+                        <div class="Button" onclick="calculator.whichNumber();">9</div>
+                        <div class="Button" onclick="calculator.whichNumber();">/</div>
+                    </div>
+                    <div class="row">
+                        <div class="Button" onclick="calculator.whichNumber();">4</div>
+                        <div class="Button" onclick="calculator.whichNumber();">5</div>
+                        <div class="Button" onclick="calculator.whichNumber();">6</div>
+                        <div class="Button" onclick="calculator.whichNumber();">*</div>
+                    </div>
+                    <div class="row">
+                        <div class="Button" onclick="calculator.whichNumber();">1</div>
+                        <div class="Button" onclick="calculator.whichNumber();">2</div>
+                        <div class="Button" onclick="calculator.whichNumber();">3</div>
+                        <div class="Button" onclick="calculator.whichNumber();">-</div>
+                    </div>
+                    <div>
+                        <div class="Button colspan2" onclick="calculator.whichNumber();">0</div>
+                        <div class="Button" onclick="calculator.whichNumber();">.</div>
+                        <div class="Button" onclick="calculator.whichNumber();">+</div>
+                    </div>
+                </div>
             </div>
             <div class="box-footer">
+                <div class="Count" id="CountClicked" onclick="calculator.show();">
+                    <button id="count" class="btn btn-secondary"> Count </button></div>
                 <div class="Clear" onclick="calculator.clearNumbers();">
-                    <button id="clear">Clear numbers</button></div>
-<!-- /.box footer -->
+                    <button id="clear" class="btn btn-secondary">Clear numbers</button></div>
             </div>
-<!-- /#insidecontainer -->
         </div>
-<!-- /.container -->
     </div>
-
     <script src="jquery-3.5.0.min.js"></script>
-    <script src="calculator.js"></script>
+    <script src="calculator1.js"></script>
     <script src="main.js"></script>
-
-
 </body>
-
 </html>

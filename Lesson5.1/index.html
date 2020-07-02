@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="flex-container">
+        <div id="InsideFrame">
+            <div class="box box-solid box-default">
+                <div class="row box-header my-auto">
+                    <h2 class="box title">Module Pattern calculator</h2>
+                </div>
+            </div>
+            <div class="row box-header my-auto content">
+                <input class="input-group-text" id="1">
+                <div class="Button">+</div>
+                <input class="input-group-text" id="2">
+                <div class="Button">-</div>
+                <input class="input-group-text" id="3">
+                <div class="Button">*</div>
+                <input class="input-group-text" id="4">
+                <div class="Button">/</div>
+                <input class="input-group-text" id="5">
+            </div>
+            <div id="box my-auto">
+                <p id="result"></p>
+            </div>
+            <div class="box-footer">
+                <div class="Count">
+                    <button id="count" class="btn btn-secondary"> Count </button></div>
+                <div class="Clear">
+                    <button id="clear" class="btn btn-secondary">Clear numbers</button></div>
+            </div>
+        </div>
+    </div>
+    <script src="jquery-3.5.0.min.js"></script>
+    <script src="main.js"></script>
+    <script src="calculator.js"></script>
+</body>
+</html>
