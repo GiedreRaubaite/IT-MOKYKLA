@@ -3,7 +3,6 @@ var calculator = (function () {
         result = null
 
     function calculate () {
-        newVal = 0
         currNumber = document.getElementById("currNumber").innerHTML;
         result = eval(currNumber);
         $('#currNumber').empty().append(result);
@@ -11,16 +10,12 @@ var calculator = (function () {
     function whichNumber(e) {
         e = e || window.event;
         var target = e.srcElement.innerText
-        console.log(target);
         if
             ($('#currNumber').text() == 0) {
-            console.log($('#currNumber').text());
             $('#currNumber').empty().append(target);
-
         }
         else {
             $('#currNumber').append(target);
-
         }
     };
     function clearNumbers() {
