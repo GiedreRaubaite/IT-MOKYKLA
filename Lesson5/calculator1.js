@@ -1,7 +1,9 @@
 var calculator = (function () {
-    var currNumber = document.getElementById("currNumber"),
+        var currNumber = document.getElementById("currNumber"),
         result = null
-    function calculate() {
+
+    function calculate () {
+        newVal = 0
         currNumber = document.getElementById("currNumber").innerHTML;
         result = eval(currNumber);
         $('#currNumber').empty().append(result);
@@ -9,12 +11,16 @@ var calculator = (function () {
     function whichNumber(e) {
         e = e || window.event;
         var target = e.srcElement.innerText
+        console.log(target);
         if
             ($('#currNumber').text() == 0) {
+            console.log($('#currNumber').text());
             $('#currNumber').empty().append(target);
+
         }
         else {
             $('#currNumber').append(target);
+
         }
     };
     function clearNumbers() {
@@ -24,6 +30,7 @@ var calculator = (function () {
     }
     function show() {
         calculate();
+        console.log(result);
         if (result.isNaN) {
             alert('Something went wrong...');
         }
