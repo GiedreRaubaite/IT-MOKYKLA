@@ -1,17 +1,15 @@
-const findLongestWord = require("../Lesson5.2/find");
-const { longestWord } = require("../Lesson5.2/find");
-const { things } = require("../Lesson5.2/find");
-
+const findLongestWord = require ('../Lesson5.2/find')
 QUnit.module('findLongestWord', function () {
   QUnit.test('should find the longest word ', function (assert) {
-    assert.equal(longestWord, "sunglasses", 'found the longest word');
-  });
-  QUnit.test('things is not an empty array', function (assert) {
-    assert.notEqual(things.length, 0, "array is not empty")
+    assert.equal(findLongestWord("England", "Lithuania", "Congo"), "Lithuania", 'found the longest word');
+    assert.equal(findLongestWord("apple", "wine", "cheesecake"), "cheesecake", 'found the longest word');
+    });
+  QUnit.test('should throw error when no parameters', function(assert){
+    assert.throws(function(){
+      findLongestWord();
   });
 });
-
-
+});
 
 
 

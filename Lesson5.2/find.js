@@ -1,23 +1,21 @@
 var longest
-var things 
 var findLongestWord = function () {
-  things = ["banana", "car", "computer", "paper", "book", "pencil", "sunglasses"];
   var lgth = 0;
-  for (var i = 0; i < things.length; i++) {
-    if (things[i].length > lgth) {
-      var lgth = things[i].length;
-      longest = things[i];
+  if (arguments.length === 0) {
+    throw Error ('No parameters');
+  }
+  else{
+  for (var i = 0; i < arguments.length; i++) {
+    if (arguments[i].length > lgth) {
+      var lgth = arguments[i].length;
+      longest = arguments[i];
     }
   }
+  return longest;
+}
 }
 
-findLongestWord();
 
-module.exports = {
-  findLongestWord: findLongestWord,
-  longestWord: longest,
-  things: things
-}
-
+module.exports = findLongestWord
 
 
