@@ -1,21 +1,16 @@
-var longest
-var findLongestWord = function () {
+function findLongestWord(params = []) {
+  var longest;
   var lgth = 0;
-  if (arguments.length === 0) {
-    throw Error ('No parameters');
-  }
-  else{
-  for (var i = 0; i < arguments.length; i++) {
-    if (arguments[i].length > lgth) {
-      var lgth = arguments[i].length;
-      longest = arguments[i];
+  if (params.length === 0) {
+    throw Error('No parameters');
+  } else {
+    for (var i = 0; i < params.length; i++) {
+      if (params[i].length > lgth) {
+        lgth = params[i].length;
+        longest = params[i];
+      }
     }
+    return longest;
   }
-  return longest;
 }
-}
-
-
-module.exports = findLongestWord
-
 
