@@ -1,17 +1,27 @@
-var fizzbuzz = function (i) {
-  for (i; i <= 100; i++) {
-    if (i % 3 === 0) {
-      return console.log("fizz");
-    }
-    if (i % 5 === 0) {
-      return console.log("buzz");
-    }
-    if ((i % 3 === 0) && (i % 5 === 0)) {
-      return console.log("fizzbuzz");
-    }
-    else {
-      return console.log("Not multiple of 3 or 5");
-    }
-  };
+var fizzbuzz = function (x) {
+  newArray = [];
+  for (i = 1; i <= 100; i++) {
+
+    switch (true) {
+      case (i % 3 === 0) && (i % 5 === 0):
+        newArray.push("fizzbuzz")
+        break;
+      case (i % 3 === 0):
+        newArray.push("fizz")
+        break;
+      case (i % 5 === 0):
+        newArray.push("buzz")
+        break;
+      default:
+        newArray.push(i);
+        break;
+    };
+  }
+  if (x === undefined) {
+    return newArray.join();
+  }
+  else {
+    return newArray[x];
+  }
 }
 
