@@ -68,17 +68,17 @@ QUnit.module('duplicate', function () {
   });
 });
 QUnit.module('fizzbuzz', function () {
-  QUnit.test('should say "fizz" at multiples of 3', function (assert) {
+  QUnit.test('should show "fizz" at multiples of 3', function (assert) {
     var fizzbuzzResult = fizzbuzz();
     assert.equal(fizzbuzzResult[2], ["fizz"]  ,  "OK");
     assert.equal(fizzbuzzResult[8], ["fizz"]  ,  "OK");
   });
-  QUnit.test('should say "buzz" at multiples of 5', function (assert) {
+  QUnit.test('should show "buzz" at multiples of 5', function (assert) {
     var fizzbuzzResult = fizzbuzz();
     assert.equal(fizzbuzzResult[4], ["buzz"]  ,  "OK");
     assert.equal(fizzbuzzResult[24], ["buzz"]  ,  "OK");
   });
-  QUnit.test('should say "buzz" at multiples of 5 and 3', function (assert) {
+  QUnit.test('should show "fizzbuzz" at multiples of 5 and 3', function (assert) {
     var fizzbuzzResult = fizzbuzz();
     assert.equal(fizzbuzzResult[14], ["fizzbuzz"]  ,  "OK");
     assert.equal(fizzbuzzResult[29], ["fizzbuzz"]  ,  "OK");
