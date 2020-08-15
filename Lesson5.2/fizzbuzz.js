@@ -1,4 +1,4 @@
-var fizzbuzz = function (x) {
+var fizzbuzz = function () {
   newArray = [];
   for (i = 1; i <= 100; i++) {
 
@@ -17,11 +17,7 @@ var fizzbuzz = function (x) {
         break;
     };
   }
-  if (x === undefined) {
-    return newArray.join();
+      return newArray;
   }
-  else {
-    return newArray[x];
-  }
-}
+
 

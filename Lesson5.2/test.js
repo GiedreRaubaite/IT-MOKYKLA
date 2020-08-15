@@ -68,20 +68,20 @@ QUnit.module('duplicate', function () {
   });
 });
 QUnit.module('fizzbuzz', function () {
-  QUnit.test('should show buzz at multiples of 5', function (assert) {
-    assert.equal(fizzbuzz(4), ["buzz"],  "OK");
-    assert.equal(fizzbuzz(9), ["buzz"],  "OK");
+  QUnit.test('should say "fizz" at multiples of 3', function (assert) {
+    var fizzbuzzResult = fizzbuzz();
+    assert.equal(fizzbuzzResult[2], ["fizz"]  ,  "OK");
+    assert.equal(fizzbuzzResult[8], ["fizz"]  ,  "OK");
   });
-  QUnit.test('should show fizzbuzz at multiples of 3', function (assert) {
-    assert.equal(fizzbuzz(2), ["fizz"]  ,  "OK");
-    assert.equal(fizzbuzz(8), ["fizz"]  ,  "OK");
+  QUnit.test('should say "buzz" at multiples of 5', function (assert) {
+    var fizzbuzzResult = fizzbuzz();
+    assert.equal(fizzbuzzResult[4], ["buzz"]  ,  "OK");
+    assert.equal(fizzbuzzResult[24], ["buzz"]  ,  "OK");
   });
-  QUnit.test('should show fizz at multiples of 3 and 5', function (assert) {
-    assert.equal(fizzbuzz(14), ["fizzbuzz"]  ,  "OK");
-    assert.equal(fizzbuzz(29), ["fizzbuzz"]  ,  "OK");
-  });
-  QUnit.test('the whole array is OK', function (assert) {
-    assert.equal(fizzbuzz(), "1,2,fizz,4,buzz,fizz,7,8,fizz,buzz,11,fizz,13,14,fizzbuzz,16,17,fizz,19,buzz,fizz,22,23,fizz,buzz,26,fizz,28,29,fizzbuzz,31,32,fizz,34,buzz,fizz,37,38,fizz,buzz,41,fizz,43,44,fizzbuzz,46,47,fizz,49,buzz,fizz,52,53,fizz,buzz,56,fizz,58,59,fizzbuzz,61,62,fizz,64,buzz,fizz,67,68,fizz,buzz,71,fizz,73,74,fizzbuzz,76,77,fizz,79,buzz,fizz,82,83,fizz,buzz,86,fizz,88,89,fizzbuzz,91,92,fizz,94,buzz,fizz,97,98,fizz,buzz",  "OK");
+  QUnit.test('should say "buzz" at multiples of 5 and 3', function (assert) {
+    var fizzbuzzResult = fizzbuzz();
+    assert.equal(fizzbuzzResult[14], ["fizzbuzz"]  ,  "OK");
+    assert.equal(fizzbuzzResult[29], ["fizzbuzz"]  ,  "OK");
   });
 });
 
