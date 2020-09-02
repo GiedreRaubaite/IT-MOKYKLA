@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF=8">
+	<title>TO DO list</title>
+	<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/f43a3de2a1.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<div id="date"></div>
+		</div>
+		<div class="content">
+			<ul id="list">
+			</ul>
+		</div>
+		<div class="add-to-do">
+			<i class="fa fa-plus-circle" id="plus"></i>
+			<input type="text" id="input" placeholder="Add a to-do">
+		</div>
+		<div id="footer">
+			<div id="counter">
+				<p id="itemsLeft"> 0 items left </p>
+			</div>
+			<ul class="filters">
+				<li><a href="" id="all">ALL</a></li>
+				<li><a href="" id="active">Active</a></li>
+				<li><a href="" id="completed">Completed</a></li>
+			</ul>
+		</div>
+	</div>
+	<script src="js/showdate.js"></script>
+	<script src="js/adtodo.js"></script>
+	<script src="js/removetodo.js"></script>
+	<script src="js/completetodo.js"></script>
+	<script src="js/itemsLeft.js"></script>
+	<script src="js/showcompleted.js"></script>
+	<script src="js/showactive.js"></script>
+	<script src="js/showall.js"></script>
+	<script src="js/index.js"></script>
+</body>
+</html>
