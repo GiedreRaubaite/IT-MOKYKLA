@@ -1,0 +1,127 @@
+body{
+width: 100%;
+    padding: 0;
+    margin: 0;
+    background-image: url('../img/background.jpg');
+background-size: cover;
+  background-repeat: no-repeat; 
+
+
+    font-family: 'Titillium Web', sans-serif;
+}
+/* ------------ container ------------ */
+.container{
+    padding:15px;
+    width:380px;
+    margin:0 auto;
+    float: left;
+}
+/* ------------ content ------------ */
+.content{
+    width:380px;
+    height: auto;
+    background-color: #e8e8e8;
+    overflow: auto;
+    border-radius: 5px;
+}
+.content::-webkit-scrollbar { 
+    display: none; 
+}
+.content ul{
+    padding:0;
+    margin:0;
+}
+
+.fa-check-circle{
+    color:#6eb200;
+}
+
+.lineThrough{
+    text-decoration: line-through;
+    color : #ccc;
+}
+/* ------------ header ------------ */
+.header  {
+    position: relative;
+    height: 15px;
+    left: 50px;
+    border: none;
+    font-size: 20px;
+    margin: 10px;
+   } 
+
+    .header p {
+	font-weight: bold;
+    }
+/* ------------ LIST ------------ */
+ul li {
+    position: relative;
+    width: auto;
+    height:auto;
+    left: 30px;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    list-style-type:none;
+}
+ul li i {
+font-size: 20px;
+margin: 2px;
+}
+i:active {
+   transform: translateY(2px);
+}
+input {
+  background-color: #f7faf8;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 45px 15px 5px ;
+  text-align: left;
+  text-decoration: none;
+  font-size: 18px;
+  margin-right: -40px;
+  box-shadow: 2px 2px #888888;
+}
+input:focus {
+  border:  0px ;
+}
+
+/* ------------ add item ------------ */
+.add-to-do {
+    position: relative;
+    width: 360px;
+    height:auto;
+    left: 30px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+	
+}
+.add-to-do i{
+    position: relative;
+    font-size: 18px;
+    color: #708090;
+}
+.add-to-do button{
+    height: 35px;
+    cursor: pointer;	
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    color: #708090;
+    display: inline-block;
+    text-decoration: none;   
+}
+.add-to-do button:active {
+   transform: translateY(2px);
+}
+.add-to-do button:focus{
+outline: none;
+}
+.fa-plus {
+    pointer-events: none ;
+}
+span {
+pointer-events: none;
+}
