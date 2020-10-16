@@ -122,13 +122,13 @@ TrashBtn.forEach(function (element) {
   });
 });
 /*checkout button*/
-var checkOutBtn = document.getElementsByClassName("CheckOut");
-checkOutBtn[0].addEventListener('click', function (e) {
+document.body.addEventListener('click', function(e){
+  if (e.target.classList.contains("CheckOut")){
     $('#popuptext').html("Sorry, I know you're thirsty... <br> But this shop is not open now :) ");
     $('#popup').modal("show");
-    e.preventDefault();
-    return;
-  });
+  };
+})
+
 /*tooltips*/
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
