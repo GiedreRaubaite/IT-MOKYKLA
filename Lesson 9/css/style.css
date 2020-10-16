@@ -19,3 +19,20 @@ img {
     width: 150px;
     height: 100px;
 }
+.Price {
+    font-weight: bold;
+}
+#popup {
+  background: rgba(235,191,146, 0.5);
+}
+i {
+    color:black;
+    pointer-events: none;
+
+}
+a:hover {
+   opacity: 0.5;
+}
+a {
+color:black;
+}
