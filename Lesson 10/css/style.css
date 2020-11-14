@@ -20,8 +20,10 @@ body, html {
     min-height: 620px;
     max-width: 250px;
     min-width: 250px;
+    z-index: auto;
 }
 #leftBlockInner {
+    z-index: auto;
     box-sizing: border-box; 
     border-radius: 20px;
     box-shadow: 0px 6px 15px 0px rgba(0,0,0,.2); 
@@ -223,18 +225,17 @@ transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
     overflow: hidden;
     vertical-align: middle;
-    border-radius: 30% !important;
     cursor: pointer;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
+    transition: opacity 1s ease-out;
 }
 .works-icon{
     color: #ff5959;
 }
 .contact-icon{
     color: #ff5959;
-
 }
 .form-control{
     border-radius: 20px !important;
@@ -265,7 +266,7 @@ transition: all .3s ease-in-out;
     height: 100%;
     position: fixed;
     width: 100%;
-    z-index: 5;
+    z-index: 10;
 }
 #preloader .outer {
     position: absolute;
@@ -312,6 +313,21 @@ transition: all .3s ease-in-out;
 @keyframes sk-rotate {
     100% {
         transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
     }
+}
+.middle:hover {
+opacity: 0.6;
+}
+.middle {
+position: absolute;
+top: 0;
+bottom: 0;
+left: 15px;
+right: 15px;
+height: 100%;
+width: 88%;
+opacity: 0;
+transition: .5s ease;
+background-color: #ff5959;
 }
