@@ -33,7 +33,6 @@ $(document).ready(function () {
             return;
         }
     });
-
     function FormCustomMessages() {
         $("#submitButton").on("click", function () {
             var name = document.getElementById('name').value;
