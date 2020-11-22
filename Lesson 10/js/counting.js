@@ -1,8 +1,8 @@
 
-function Counting(){
+function Counting() {
     const section = document.querySelector('#counting');
     let hasEntered = false;
-window.addEventListener('scroll', (e) => {
+    window.addEventListener('scroll', (e) => {
         const shouldAnimate = (window.scrollY + window.innerHeight) >= section.offsetTop;
         if (shouldAnimate && !hasEntered) {
             hasEntered = true;
