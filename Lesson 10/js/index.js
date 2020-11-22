@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    Counting();
     MobileNavigationClickEvents();
     FormCustomMessages();
     Scrollspy();

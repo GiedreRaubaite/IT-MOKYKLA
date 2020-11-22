@@ -1,5 +1,4 @@
-
-function Counting() {
+$(document).ready(function () {
     const section = document.querySelector('#counting');
     let hasEntered = false;
     window.addEventListener('scroll', (e) => {
@@ -19,4 +18,4 @@ function Counting() {
             });
         }
     });
-};
+});
