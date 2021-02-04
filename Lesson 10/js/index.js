@@ -1,91 +1,94 @@
-$(document).ready(function () {
-    MobileNavigationClickEvents();
-    FormCustomMessages();
-    Scrollspy();
-    Isotope();
+$(document).ready(function() {
+
+    ToggleMobileNavigation();
+    SetFormCustomMessages();
+    InitScrollspyListeners();
+    SetupIsotope();
+
     $("#preloader").delay(350).fadeOut('slow');
-    $("#navbarWorksLarge .list-inline-item").on('click', function () {
-        $(".list-inline-item").each(function () {
-            $(this).removeClass("current");
-            $(this).addClass("text-secondary");
+    $("#navbar-works-large .list-inline-item").on('click', function() {
+        $(".list-inline-item").each(function() {
+            $(this).removeClass("current").addClass("text-secondary");
         });
-        $(this).toggleClass("current");
-        $(this).removeClass("text-secondary");
+        $(this).toggleClass("current").removeClass("text-secondary");
     });
-    $("#works li").on("click", function () {
+    $("#works li").on("click", function() {
         const customType = $(this).data('filter');
         $("#works-block").isotope({
             filter: customType
         });
     });
-    $("#loadMoreButton").on("click", function () {
-        let text = $(this).text();
-        $("#loadMore").toggleClass("d-none");
-        $(this).text(text == " Load More " ? " Show Less " : " Load More ");
-        $(".current").trigger("click");
-    })
-    $("#navigation li").on('click', function () {
+    $("#navigation li").on('click', function() {
         if ($(document).width() < 768) {
-            $("#leftBlock").removeClass("d-inline").addClass("d-none");
-        }
-        else {
-            return;
-        }
+            $("#left-block").removeClass("d-inline").addClass("d-none");
+        };
     });
-    function FormCustomMessages() {
-        $("#submitButton").on("click", function () {
+
+    function SetFormCustomMessages() {
+        $("#submit-button").on("click", function() {
             var name = document.getElementById('name').value;
-            if (name == "") {
-                document.querySelector('.status').innerHTML = '<span class="text-danger font-weight-bold">Name cannot be empty!! </span>';
-                return false;
-            }
             var email = document.getElementById('email').value;
+            var subject = document.getElementById('subject').value;
+            var message = document.getElementById('message').value;
+            if (name == "") {
+                UpdateMessage("emptyname");
+                return false
+            }
             if (email == "") {
-                document.querySelector('.status').innerHTML = '<span class="text-danger font-weight-bold">E-mail cannot be empty!! </span>';
-                return false;
+                UpdateMessage("emptymail");
+                return false
             } else {
                 var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
                 if (!re.test(email)) {
-                    document.querySelector('.status').innerHTML = '<span class="text-danger font-weight-bold">Email format invalid!! </span>';
-                    return false;
+                    UpdateMessage("mailformatinvalid");
+                    return false
                 }
             }
-            var subject = document.getElementById('subject').value;
             if (subject == "") {
-                document.querySelector('.status').innerHTML = '<span class="text-danger font-weight-bold">Subject cannot be empty!! </span>';
-                return false;
+                UpdateMessage("emptysubject");
+                return false
             }
-            var message = document.getElementById('message').value;
             if (message == "") {
-                document.querySelector('.status').innerHTML = '<span class="text-danger font-weight-bold">Message cannot be empty!! </span>';
-                return false;
+                UpdateMessage("emptymessage");
+                return false
             }
-            document.querySelector('.status').innerHTML = '<span class="text-success font-weight-bold">Sending.... </span>';
+            UpdateMessage("sending");
+
+            function UpdateMessage(whichCase) {
+                const FormMessage = (CustomMessage) => ({
+                    "emptyname": "Name cannot be empty.",
+                    "emptymail": "Email cannot be empty.",
+                    "mailformatinvalid": "Email format invalid!!",
+                    "emptysubject": "Subject cannot be empty!!",
+                    "emptymessage": "Message cannot be empty!!",
+                    "sending": "Sending...."
+                })[CustomMessage]
+                var htmlElement = `<span class="text-danger font-weight-bold"> ${FormMessage(whichCase)} </span>`;
+                document.querySelector('.status').innerHTML = htmlElement;
+            };
         });
     };
-    function Isotope() {
+
+    function SetupIsotope() {
         $("#works-block").isotope({
             itemSelector: '.works',
             layoutMode: 'fitRows'
         });
     };
-    function MobileNavigationClickEvents() {
-        $('#navigationButton').on('click', function () {
-            $("#leftBlock").toggleClass("d-inline");
+
+    function ToggleMobileNavigation() {
+        $('#navigation-button').on('click', function() {
+            $("#left-block").toggleClass("d-inline");
         });
-        $('#closeButton').on('click', function () {
-            $("#leftBlock").removeClass("d-inline").addClass("d-none");
+        $('#close-button').on('click', function() {
+            $("#left-block").removeClass("d-inline").addClass("d-none");
         });
     }
-    function Scrollspy() {
-        $(window).on('activate.bs.scrollspy', function () {
-            $(".nav-link").each(function () {
-                if ($(this).hasClass("active")) {
-                    $(this).children("span").css("background", "#ff5959");
-                }
-                else {
-                    $(this).children("span").css("background", "#4a63e7");
-                }
+
+    function InitScrollspyListeners() {
+        $(window).on('activate.bs.scrollspy', function() {
+            $(".nav-link").each(function() {
+                $(this).hasClass("active") ? $(this).children("span").addClass("red-background") : $(this).children("span").removeClass("red-background");
             });
         });
     };

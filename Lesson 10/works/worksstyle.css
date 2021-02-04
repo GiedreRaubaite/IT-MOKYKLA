@@ -1,0 +1,10 @@
+iframe {
+    height: 700px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.shop-basket-iframe {
+    width: 110%;
+    height: 1100px;
+}

@@ -1,0 +1,39 @@
+body {
+    background: url('../images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    margin: 0px;
+    background: rgba(235, 191, 146, 0.5);
+}
+
+.shoppingCart {
+    margin-left: 20px;
+}
+
+img {
+    width: 150px;
+    height: 100px;
+}
+
+.price {
+    font-weight: bold;
+}
+
+#popup {
+    background: rgba(235, 191, 146, 0.5);
+}
+
+i {
+    color: black;
+    pointer-events: none;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+a {
+    color: black;
+}

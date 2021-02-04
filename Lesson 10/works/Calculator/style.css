@@ -1,0 +1,90 @@
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#InsideFrame {
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    width: 500px;
+    margin: 50px;
+    text-align: center;
+    justify-content: center;
+}
+
+.box-header {
+    justify-content: center;
+    text-align: center;
+}
+
+#box {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.box-body {
+    padding: 30px;
+    text-align: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.box-footer {
+    background-color: #f1f1f1;
+    justify-content: center;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.Button {
+    float: left;
+    width: 45px;
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 14pt;
+    padding: 8px 8px 8px 8px;
+    border: 1px solid #d4d4d4;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #efefef;
+}
+
+.Button:hover {
+    background-color: #fff;
+}
+
+.CurrentNumber {
+    height: 40px;
+    font-size: 26px;
+    background-color: White;
+    text-align: right;
+    vertical-align: middle;
+    margin-right: 2px;
+}
+
+.CalculatorHead {
+    width: 244px;
+}
+
+.Equation {
+    font-size: 8pt;
+    font-family: Verdana;
+    height: 10px;
+    text-align: right;
+    margin-left: 50px;
+    padding-bottom: 4px;
+}
+
+.colspan2 {
+    width: 89px;
+    margin-left: -14px;
+}
+
+.btn-secondary {
+    margin: 10px;
+}
